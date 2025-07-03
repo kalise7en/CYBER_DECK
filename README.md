@@ -1,42 +1,50 @@
 # CYBER_DECK
 
-A portable, customizable PC in a laptop-style architecture. Housed in a weatherproof case, a Raspberry Pi 5, 65,000mAh power bank, 10" touchscreen, and 2TB SSD (USB boot) work together to run Kali Linux and operate as an independent penetration testing tool. With Wi-Fi adapters and an SDR, this machine can perform deauth attacks and scan a wide range of radio frequencies.
+The Cyber_Deck is a portable, customizable computing system housed in a weatherproof case. It is built around a Raspberry Pi 5 and designed for independent security auditing and wireless experimentation. The system includes a 10-inch touchscreen, 2TB NVMe SSD for storage, and a 65,000mAh power bank. Running Kali Linux, it supports Wi-Fi and SDR-based testing and monitoring.
 
 ---
 
-## 🧰 Hardware
+## Hardware Components
 
-- **Raspberry Pi 5 (8GB)**
-- **Pi 5 Official Active Cooler**
-- **10.1" IPS LCD Touch Screen** (1024x600)
-- **2TB Crucial P3 NVMe SSD** in Dockteck USB 3.2 enclosure
-- **65,000mAh PD Power Bank** (22.5W)
-- **Weatherproof MEIJIA Case** (15.98"x12.99"x6.85")
-- **Cables**: HDMI, USB-C, USB 3.0, 3.5mm audio, Ethernet—all short and panel-mounted where possible
-
----
-
-## 🛰️ Adapters
-
-- **SDR**: NooElec Smart V5 (radio transmission analysis)
-- **Wi-Fi**: Panda PAU0F AXE3000 (WiFi 6E, monitor mode capable)
-
-> *Check YouTube for setup tutorials for GQRX, GNU Radio, and Airmon-ng with these adapters.*
+- Raspberry Pi 5 (8GB RAM)
+- Official Raspberry Pi 5 Active Cooler with aluminum heatsink and blower
+- 10.1" IPS LCD Touchscreen Display (1024x600 resolution)
+- 2TB Crucial P3 NVMe SSD in a Dockteck USB 3.2 tool-free enclosure
+- 65,000mAh power bank with USB Power Delivery (22.5W)
+- MEIJIA all-weather waterproof protective case (15.98" x 12.99" x 6.85")
+- Panel-mounted and short cables:
+  - Micro HDMI to HDMI (90° angled)
+  - USB 3.0 male to female extensions
+  - USB-C male to female extension
+  - RJ45 Ethernet extension (panel mount)
+  - 3.5mm stereo audio extension
 
 ---
 
-## ⚠️ Power Notes
+## Wireless and Radio Adapters
 
-- The Pi 5 draws 27 W at boot. Modify `config.txt` with `max_current_enable=1` to avoid manual startup.
-- Ensure the power bank supports USB PD (Power Delivery).
-- Some power banks lack a switch. A hardware kill switch was added between the battery cell and PCB (⚠️ only do this if you know what you're doing—Li-ion batteries are dangerous).
+- NooElec Smart V5 SDR for radio frequency analysis
+- Panda Wireless PAU0F AXE3000 WiFi 6E adapter (supports monitor mode)
+
+Note: Various online tutorials are available for configuring these adapters with GQRX, GNU Radio, and Airmon-ng.
 
 ---
 
-## 📚 Libraries & Tools
+## Power Management Considerations
 
-- **Kiwix** (offline Wikipedia + ZIM files for portable reference)
-- **Ollama** (terminal-accessible local LLMs)
-- **Kali Linux** (full suite preinstalled; update before going offline):
-  ```bash
-  sudo apt update && sudo apt upgrade -y
+- The Raspberry Pi 5 requires ~2.7A during boot. To ensure smooth operation without manual intervention, set `max_current_enable=1` in `config.txt`.
+- USB PD-compatible power banks are recommended to handle high current demand.
+- If using a power bank without a hardware switch, a kill switch can be added inline between the battery and PCB. Only perform such modifications if properly trained, as lithium-ion batteries can be hazardous.
+
+---
+
+## Software and Offline Tools
+
+- **Kiwix** for offline access to large information repositories such as Wikipedia (via ZIM files)
+- **Ollama** for running lightweight local LLMs through the terminal
+- **Kali Linux** full penetration testing suite
+
+Be sure to update your system before disconnecting from the internet:
+
+```bash
+sudo apt update && sudo apt upgrade -y
