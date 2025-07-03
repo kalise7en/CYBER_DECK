@@ -44,10 +44,7 @@ Note: Various online tutorials are available for configuring these adapters with
 - **Ollama** for running lightweight local LLMs through the terminal
 - **Kali Linux** full penetration testing suite
 
-Be sure to update your system before disconnecting from the internet:
-
-sudo apt update && sudo apt upgrade -y
-
+Be sure to update your system before disconnecting from the internet
 ---
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/a62b2c2b-541a-4fed-be7d-7272fe7cc2f6" width="500"/><br/> <em>External View - Closed Cyber Deck</em> </p> <p align="center"> <img src="https://github.com/user-attachments/assets/dbcd73ae-0d05-49e1-a130-47be137595de" width="500"/><br/> <em>Boot-Up Display Screen</em> </p> <p align="center"> <img src="https://github.com/user-attachments/assets/42e54aaf-c617-4bc3-af82-5a841c22c21d" width="500"/><br/> <em>Internal Wiring and Component Layout</em> </p> <p align="center"> <img src="https://github.com/user-attachments/assets/f6d71703-7592-4716-a841-84c766f7275e" width="500"/><br/> <em>Side View - Ports and Extensions</em> </p> <p align="center"> <img src="https://github.com/user-attachments/assets/e8ee1701-09b4-41d8-b214-b63c13b0c3be" width="500"/><br/> <em>Internal Components - SSD, Pi 5, Power</em> </p> <p align="center"> <img src="https://github.com/user-attachments/assets/abba3c18-c548-422d-9def-ff5de38d7f5c" width="500"/><br/> <em>Touchscreen UI Running Kali</em> </p> <p align="center"> <img src="https://github.com/user-attachments/assets/52b3fb74-cd66-4f00-a588-51794c5be056" width="500"/><br/> <em>Back Panel and Heatsink Fan</em> </p>
